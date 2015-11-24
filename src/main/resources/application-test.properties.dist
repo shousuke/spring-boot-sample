@@ -1,0 +1,15 @@
+hostname=127.0.0.1
+
+datasource.url=jdbc:mysql://${hostname}/entpay_2?useUnicode=true&characterEncoding=UTF8
+datasource.username=silversnet
+datasource.password=si1ver$net
+datasource.driver-class-name=com.mysql.jdbc.Driver
+
+datasource.merchant.url=jdbc:mysql://${hostname}/merchant?useUnicode=true&characterEncoding=UTF8
+datasource.merchant.username=silversnet
+datasource.merchant.password=si1ver$net
+datasource.merchant.driver-class-name=com.mysql.jdbc.Driver
+
+spring.redis.host=${hostname}
+spring.redis.port=6379
+spring.redis.database=1

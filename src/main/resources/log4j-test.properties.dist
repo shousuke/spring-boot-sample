@@ -1,0 +1,22 @@
+log.dir=/var/log/entpay-admin/test
+log4j.rootLogger=INFO, stdout
+log4j.logger.org.springframework.jdbc.core=DEBUG
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d [%24F:%t:%L] - %m%n
+
+log4j.appender.debugLog=org.apache.log4j.RollingFileAppender
+log4j.appender.debugLog.File=${log.dir}/debug.log
+log4j.appender.debugLog.MaxFileSize=10MB
+log4j.appender.debugLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.debugLog.layout.ConversionPattern=%d [%24F:%t:%L] - %m%n
+log4j.category.debugLogger=DEBUG, debugLog
+log4j.additivity.debugLogger=true
+
+log4j.appender.orderLog=org.apache.log4j.FileAppender
+log4j.appender.orderLog.File=${log.dir}/order.log
+log4j.appender.orderLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.orderLog.layout.ConversionPattern=%d [%24F:%t:%L] - %m%n
+log4j.category.orderLogger=DEBUG, orderLog
+log4j.additivity.orderLogger=true
